@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp"placeholder="Type here">
+    <button onclick="check()">Check</button>
+    <div id="display"></div>
+    <script>
+        class Student {
+            constructor (named,department,matric){
+                this.name = named
+                this.dept = department
+                this.mat = matric
+            }
+            details(){
+            display.innerHTML=`The name of the student is ${this.name} and their department is ${this.dept} while their matric number ${this.mat}`;
+        }
+        }
+        let studentOne = new Student("Adekola","chemistry", 143561)
+        let studentTwo = new Student("Shola", "physics",231456)
+        let studentThree = new Student("Sunday", "Biology", 162345)
+        let studentFour = new Student("Shola", "Mathematics", 142345)
+        let studentFive = new Student("Kola", "CSE", 132345)
+        let studentSix = new Student("Peter", "Geography", 172345)
+        let studentSeven = new Student("Bolu", "Mathematics", 182345)
+        let studentEight = new Student("Tope", "CSE", 152345)
+        let studentNine = new Student("Alade", "Physiology", 192345)
+        let studentTen = new Student("David", "Mathematics", 182345)
+        //console.log(studentOne);
+
+        const check = () => {
+            if(inp.value == studentOne.value){
+                studentOne.details()
+            }else if (inp.value == studentTwo.value){
+                studentTwo.details()
+            }else if (inp.value == studentThree.value){
+                studentThree.details()
+            }else if (inp.value == studentFour.value){
+                studentFour.details()
+            }else if (inp.value == studentFive.value){
+                studentFive.details()
+            }else if (inp.value == studentSix.value){
+                studentSix.details()
+            }else if (inp.value == studentSeven.value){
+                studentSeven.details()
+            }else if (inp.value == studentEight.value){
+                studentEight.details()
+            }else if (inp.value == studentNine.value){
+                studentNine.details()
+            }else if(inp.value == studentTen.value){
+                studentTen.details()
+        }
+    }
+
+
+
+
+    </script>
+</body>
+</html>
