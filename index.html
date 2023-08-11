@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    <input type="text" id="inp"placeholder="Type here">
-    <button onclick="check()">Check</button>
+<body class="bg-success">
+    <div class="mt-4 col-sm-12 col-lg-6">
+        <input type="text" id="inp"placeholder="Type here">
+        <button onclick="check()">Check</button>
+    </div>
     <div id="display"></div>
+
     <script>
         class Student {
             constructor (named,department,matric){
@@ -17,7 +22,15 @@
                 this.mat = matric
             }
             details(){
-            display.innerHTML=`The name of the student is ${this.name} and their department is ${this.dept} while their matric number ${this.mat}`;
+                
+            display.innerHTML= `
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">STUDENT DETAILS</h5>
+                        <p>The name of the student is ${this.name} and their department is ${this.dept} and their matric number is ${this.mat}.</p>
+                    </div>
+                </div>
+                `
         }
         }
         let studentOne = new Student("Adekola","chemistry", 143561)
@@ -30,28 +43,27 @@
         let studentEight = new Student("Tope", "CSE", 152345)
         let studentNine = new Student("Alade", "Physiology", 192345)
         let studentTen = new Student("David", "Mathematics", 182345)
-        //console.log(studentOne);
 
         const check = () => {
-            if(inp.value == studentOne.value){
+            if(inp.value == studentOne.name){
                 studentOne.details()
-            }else if (inp.value == studentTwo.value){
+            }else if (inp.value == studentTwo.name){
                 studentTwo.details()
-            }else if (inp.value == studentThree.value){
+            }else if (inp.value == studentThree.name){
                 studentThree.details()
-            }else if (inp.value == studentFour.value){
+            }else if (inp.value == studentFour.name){
                 studentFour.details()
-            }else if (inp.value == studentFive.value){
+            }else if (inp.value == studentFive.name){
                 studentFive.details()
-            }else if (inp.value == studentSix.value){
+            }else if (inp.value == studentSix.name){
                 studentSix.details()
-            }else if (inp.value == studentSeven.value){
+            }else if (inp.value == studentSeven.name){
                 studentSeven.details()
-            }else if (inp.value == studentEight.value){
+            }else if (inp.value == studentEight.name){
                 studentEight.details()
-            }else if (inp.value == studentNine.value){
+            }else if (inp.value == studentNine.name){
                 studentNine.details()
-            }else if(inp.value == studentTen.value){
+            }else if(inp.value == studentTen.name){
                 studentTen.details()
         }
     }
